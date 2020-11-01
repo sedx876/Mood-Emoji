@@ -1,5 +1,6 @@
 const express = require('express')
 const path = require('path')
+const Sentiment = require('sentiment')
 
 const port = 3000
 const app = express()
@@ -11,10 +12,13 @@ app.get('/', function(req, res) {
 })
 
 app.get('/emotion', function(req, res) {
-  // Valence of emotion section code will be here for not it returns nothing
-  res.send({})
+  const sentiment = new Sentiment()
+  const text = req.query.text
+  const score = sentiment.analyze(text)
+
+  res.send(score)
 })
 
-app.listen(port, function () {
-  console.log(`Listening on port ${port}!`)
+app.listen(port, function() {
+  console.log(`Listening on port ${port}`)
 })
