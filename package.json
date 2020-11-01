@@ -1,0 +1,24 @@
+{
+  "name": "mood-emoji",
+  "version": "1.0.0",
+  "description": "\"# Mood-Emoji\"",
+  "main": "index.js",
+  "scripts": {
+    "server": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sedx876/Mood-Emoji.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sedx876/Mood-Emoji/issues"
+  },
+  "homepage": "https://github.com/sedx876/Mood-Emoji#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6"
+  }
+}
